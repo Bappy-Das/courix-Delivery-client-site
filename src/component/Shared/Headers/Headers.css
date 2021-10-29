@@ -1,0 +1,13 @@
+.head-bg{
+    background-color: #0A163D;
+}
+/* bg="dark"  */
+
+.pg-color{
+    background-color:#D0A002;
+}
+.user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

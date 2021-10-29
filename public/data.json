@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "SEA FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    },
+    {
+        "id": 2,
+        "name": "AIR FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    },
+    {
+        "id": 3,
+        "name": "AIR FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    },
+    {
+        "id": 4,
+        "name": "AIR FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    },
+    {
+        "id": 5,
+        "name": "AIR FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    },
+    {
+        "id": 6,
+        "name": "AIR FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    },
+    {
+        "id": 7,
+        "name": "AIR FREIGHT",
+        "details": "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+        "img": "https://i.ytimg.com/vi/yu0Wb2pP3hQ/maxresdefault.jpg"
+    }
+]
