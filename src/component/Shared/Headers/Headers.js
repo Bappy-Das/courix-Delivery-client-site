@@ -19,18 +19,22 @@ const Headers = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <Nav.Link as={HashLink} to="/">Home</Nav.Link>
-                            {/* <Nav.Link as={HashLink} to="/service">Service</Nav.Link> */}
+                            <Nav.Link as={HashLink} to="/service#service">Service</Nav.Link>
                             <Nav.Link as={HashLink} to="/about">About Us</Nav.Link>
                             <Nav.Link as={HashLink} to="/contact">Contact Us</Nav.Link>
+
+                            <Nav.Link as={HashLink} to="/newservice">Add New Service</Nav.Link>
+                            <Nav.Link as={HashLink} to="/manageorder">Manage All Order</Nav.Link>
+
 
                         </Nav>
                         <Nav>
                             {user?.accessToken ?
                                 <div className="d-flex">
-                                    <img className="user-img" src={user?.photoURL} alt="" srcset="" />
+                                    <HashLink to="/myorder"><img className="user-img" src={user?.photoURL} alt="" srcset="" /></HashLink>
                                     <NavDropdown title={user?.displayName} id="collasible-nav-dropdown">
                                         <NavDropdown.Item as={HashLink} to="/">My Profile</NavDropdown.Item>
-                                        <NavDropdown.Item as={HashLink} to="/">My Order</NavDropdown.Item>
+                                        <NavDropdown.Item as={HashLink} to="/myorder">My Order</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item onClick={logOut}>Log Out</NavDropdown.Item>
                                     </NavDropdown>

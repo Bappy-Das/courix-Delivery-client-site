@@ -8,13 +8,13 @@ import { FaArrowRight } from 'react-icons/fa';
 const Service = () => {
     const [service, setService] = useState([]);
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
 
     return (
-        <Container className="my-5">
+        <Container id="service" className="banner-row">
             <Row xs={1} md={2} className="my-5">
                 <h1><span className="custom-text-color">Services</span> on which we specialize</h1>
                 <p>We offer you with a wide range of services, which will make your delivery process easy and quick. All our services are presented here.</p>
@@ -28,12 +28,12 @@ const Service = () => {
                             <Card.Body>
                                 <Card.Title>{data.name}</Card.Title>
                                 <Card.Text>
-                                    {data.details}
+                                    {data.description}
                                 </Card.Text>
                             </Card.Body>
                             <Card.Footer>
-                                <Link to={`./servicedetails/${data.id}`}>
-                                    <Button>Details <FaArrowRight /></Button>
+                                <Link to={`./servicedetails/${data._id}`}>
+                                    <Button variant="warning">Details <FaArrowRight /></Button>
                                 </Link>
                             </Card.Footer>
                         </Card>

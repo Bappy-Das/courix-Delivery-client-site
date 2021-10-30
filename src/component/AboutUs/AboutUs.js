@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const AboutUs = () => {
     return (
         <>
-            <Container>
+            <Container className="banner-row">
                 <h1>This is about us</h1>
             </Container>
         </>
