@@ -11,8 +11,8 @@ const Headers = () => {
     const { user, logOut } = useAuth();
 
     return (
-        <div>
-            <Navbar collapseOnSelect expand="lg" className="my-0 py-0 head-bg" variant="dark">
+        <div className="">
+            <Navbar collapseOnSelect expand="lg" fixed="top" className="my-0 py-0 head-bg" variant="dark">
                 <Container>
                     <Navbar.Brand as={HashLink} to="/" > <img className="img-fluid" src={logo1} alt="Curix" srcset="" /> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

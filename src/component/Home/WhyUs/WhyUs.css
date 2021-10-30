@@ -1,0 +1,30 @@
+.custom-text-color{
+color: #FF922D;
+}
+.btn-color{
+    background-color: #FF922D;
+}
+.why-head{
+    font-weight: 600;
+}
+.card-body-height{
+    height: 150px;
+}
+.why-us{
+    margin-bottom: 200px;
+}
+
+
+.card {
+    padding: 10px;
+    /* border: none; */
+    cursor: pointer
+}
+
+.card:hover {
+    background-color: #eee
+}
+
+.card span {
+    font-size: 14px
+}

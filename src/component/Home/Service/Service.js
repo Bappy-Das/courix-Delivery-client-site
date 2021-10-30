@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -14,8 +14,13 @@ const Service = () => {
     }, [])
 
     return (
-        <div>
-            <Row xs={1} md={3} className="g-4 m-5">
+        <Container className="my-5">
+            <Row xs={1} md={2} className="my-5">
+                <h1><span className="custom-text-color">Services</span> on which we specialize</h1>
+                <p>We offer you with a wide range of services, which will make your delivery process easy and quick. All our services are presented here.</p>
+            </Row>
+            <Row xs={1} md={3} className="g-4">
+
                 {
                     service.map(data => <Col>
                         <Card>
@@ -35,7 +40,7 @@ const Service = () => {
                     </Col>)
                 }
             </Row>
-        </div>
+        </Container>
     );
 };
 
