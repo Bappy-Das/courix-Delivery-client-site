@@ -37,9 +37,9 @@ const Service = () => {
                                     <h5 class="card-title  mt-3 mb-3">{data?.name}</h5>
                                     <p class="card-text">{data?.description}</p>
                                     <ul>
-                                        <li>Big Cartoon Cost : {data?.big_carton}</li>
-                                        <li>Small Cartoon Cost: {data?.small_carton}</li>
-                                        <li>Over 20 Kg : {data?.avoveKg}</li>
+                                        <li>Big Cartoon Cost : {data?.big_carton} $</li>
+                                        <li>Small Cartoon Cost: {data?.small_carton} $</li>
+                                        <li>Over 20 Kg : {data?.avoveKg} $ Per Kg</li>
                                     </ul>
                                     <hr />
                                     <Link to={`./servicedetails/${data._id}`}>

@@ -15,6 +15,7 @@ const ServiceDetails = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         // console.log(data);
+        data.status = "pending";
         data.booked_service = service
         axios.post('https://immense-dawn-79364.herokuapp.com/shipping', data)
             .then(res => {
@@ -37,7 +38,7 @@ const ServiceDetails = () => {
             <h1 className="text-center fw-bold custom-text-color">Shipment Information</h1>
             <hr className="w-50 mx-auto" />
             <Row>
-                <Col xs={12} md={6} className="p-5">
+                <Col xs={12} md={6} className="p-5 mt-4">
 
                     <Card>
                         <Card.Img className="img-fluid" variant="top" src={service.img} />
@@ -46,9 +47,9 @@ const ServiceDetails = () => {
                             <Card.Text>
                                 <p>{service.description}</p>
                                 <ul>
-                                    <li>Big Cartoon Cost : </li>
-                                    <li>Small Cartoon Cost</li>
-                                    <li>Per kG Cost :</li>
+                                    <li>Big Cartoon Cost : {service?.big_carton} $</li>
+                                    <li>Small Cartoon Cost: {service?.small_carton} $</li>
+                                    <li>Over 20 Kg : {service?.avoveKg} $ Per Kg</li>
                                 </ul>
 
 
@@ -67,6 +68,12 @@ const ServiceDetails = () => {
                         <input {...register("email")} value={user?.email} />
                         <span>Product Sent Via :</span>
                         <input {...register("service_name")} value={service?.name?.toLowerCase()} />
+                        <input
+                            {...register("date", { required: true })}
+                            placeholder="date"
+                            defaultValue={new Date()}
+                            className="p-2 m-2"
+                        />
                         <span>Product Type :</span>
                         <select {...register("product_Type")}>
                             <option value="female">Documentation</option>

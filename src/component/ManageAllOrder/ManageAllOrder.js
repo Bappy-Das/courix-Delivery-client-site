@@ -1,15 +1,17 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import './ManageAllOrder.css'
 
 const ManageAllOrder = () => {
     const [orders, setOrder] = useState([])
+    const [status, setStatus] = useState(false);
 
     useEffect(() => {
         fetch('https://immense-dawn-79364.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setOrder(data))
-    }, [])
+    }, [status])
     const handleDelete = id => {
         const url = `https://immense-dawn-79364.herokuapp.com/order/${id}`
         fetch(url, {
@@ -24,6 +26,14 @@ const ManageAllOrder = () => {
                 }
             })
     }
+    const updateStatus = (id) => {
+
+        axios.put(`http://localhost:5000/updateOrder`, { id })
+            .then(res => console.log("Order Approved"))
+            .then((data) => setStatus(true))
+
+    };
+
     return (
         <Container className="banner-row">
             <h1 className="my-5">Manage all Order</h1>
@@ -47,7 +57,7 @@ const ManageAllOrder = () => {
             {
                 orders.map(order => <Row className="m-3 p-4 order-body">
                     <Col xs={4} md={4}>
-                        <p>Service Name: </p>
+                        <p>Service Name: { }</p>
                         <p>Product : {order.service_name} </p>
                     </Col>
                     <Col xs={6} md={6}>
@@ -58,8 +68,20 @@ const ManageAllOrder = () => {
                         <p>Phone : </p>
                     </Col>
                     <Col xs={2} md={2} className="d-flex flex-column justify-content-center align-items-center">
-                        <p>Status : Pending</p>
+                        <p>Status : {order?.status}</p>
                         <Button onClick={() => handleDelete(order._id)} variant="danger">Delete Order</Button>
+
+                        {
+                            (order.status === "Approved") ? <Button
+                                variant="info">
+                                {order?.status}
+                            </Button> :
+                                <Button
+                                    onClick={() => updateStatus(order._id)}
+                                    variant="info">
+                                    {order?.status}
+                                </Button>
+                        }
                     </Col>
                 </Row>)
             }
