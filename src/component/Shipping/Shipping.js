@@ -9,7 +9,7 @@ const Shipping = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/shipping', data)
+        axios.post('https://immense-dawn-79364.herokuapp.com/shipping', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Succesfully Inserted")

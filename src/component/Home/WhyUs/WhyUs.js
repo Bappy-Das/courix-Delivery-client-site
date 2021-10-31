@@ -5,15 +5,15 @@ const WhyUs = () => {
     return (
         <>
             <Container className="why-us">
-                <Row className="my-5">
+                <Row className="my-5 ">
                     <Col xs={12} md={4}>
-                        <h2 className="why-head">We work quickly <br /> and <span className="custom-text-color">efficiently!</span> </h2>
+                        <h1 className="why-head fw-bold mb-5">We work quickly and <span className="custom-text-color">efficiently!</span> </h1>
                         <p>We provide local and international delivery services. Machiter is number one company implementing logistics services. With our rich experience we have unique skills and professional staff.</p>
                         <p>Working closely with our clients to customize their exact needs has always been very rewarding for us.</p>
-                        <Button variant="warning">Know More About us</Button>
+                        <Button className="fw-bold" variant="warning">Know More About us</Button>
                     </Col>
                     <Col xs={12} md={8} className="">
-                        <Row xs={1} md={2} className="g-4">
+                        <Row xs={1} md={2} className="g-4 mt-2">
 
                             <Col >
                                 <Card border="warning">

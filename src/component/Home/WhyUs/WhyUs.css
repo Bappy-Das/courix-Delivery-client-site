@@ -15,16 +15,16 @@ color: #FF922D;
 }
 
 
-.card {
+.why-us .card {
     padding: 10px;
     /* border: none; */
     cursor: pointer
 }
 
-.card:hover {
+.why-us .card:hover {
     background-color: #eee
 }
 
-.card span {
+.why-us .card span {
     font-size: 14px
 }

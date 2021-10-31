@@ -1,0 +1,9 @@
+.order-head{
+    background-color: rgb(236, 243, 131);
+    border-radius: 15px;
+    height: 70px;
+}
+.order-body{
+    background-color: rgb(219, 234, 248);
+    border-radius: 15px;
+}

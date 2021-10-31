@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import './ManageAllOrder.css'
 
 const ManageAllOrder = () => {
     const [orders, setOrder] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://immense-dawn-79364.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [])
     const handleDelete = id => {
-        const url = `http://localhost:5000/order/${id}`
+        const url = `https://immense-dawn-79364.herokuapp.com/order/${id}`
         fetch(url, {
             method: "DELETE"
         })
@@ -25,14 +26,44 @@ const ManageAllOrder = () => {
     }
     return (
         <Container className="banner-row">
-            <h1>Manage all Order</h1>
+            <h1 className="my-5">Manage all Order</h1>
+            <Row className="m-3 p-4 order-head text-center">
+                <Col xs={4} md={4}>
+                    <strong>Service info </strong>
+                    <hr className="w-50 mx-auto" />
+
+                </Col>
+                <Col xs={4} md={4}>
+                    <strong>Product info </strong>
+                    <hr className="w-50 mx-auto" />
+
+                </Col>
+                <Col xs={4} md={4}>
+                    <strong>Order Status </strong>
+                    <hr className="w-50 mx-auto" />
+
+                </Col>
+            </Row>
             {
-                orders.map(order => <div className="d-flex my-4">
-                    <h3>{order.service_name}</h3>
-                    {/* <button onClick={() => handleDelete(service._id)}>Delete Service</button> */}
-                    <Button onClick={() => handleDelete(order._id)} variant="danger">Delete</Button>
-                </div>)
+                orders.map(order => <Row className="m-3 p-4 order-body">
+                    <Col xs={4} md={4}>
+                        <p>Service Name: </p>
+                        <p>Product : {order.service_name} </p>
+                    </Col>
+                    <Col xs={6} md={6}>
+                        <p>Email : {order.email}</p>
+                        <p>Order By : {order.user_name}</p>
+                        <p>Address : </p>
+                        <p>Delevery Date: </p>
+                        <p>Phone : </p>
+                    </Col>
+                    <Col xs={2} md={2} className="d-flex flex-column justify-content-center align-items-center">
+                        <p>Status : Pending</p>
+                        <Button onClick={() => handleDelete(order._id)} variant="danger">Delete Order</Button>
+                    </Col>
+                </Row>)
             }
+
         </Container>
     );
 };

@@ -2,3 +2,13 @@
     margin-top: 100px;
     margin-bottom: 150px;
 }
+.banner-text{
+    line-height: 1.7;
+}
+
+.main-color{
+    color: #D1A002;
+}
+.banner-img{
+    border: 5 px solid red;
+}

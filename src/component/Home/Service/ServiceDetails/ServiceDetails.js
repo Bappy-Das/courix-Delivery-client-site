@@ -13,7 +13,7 @@ const ServiceDetails = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/shipping', data)
+        axios.post('https://immense-dawn-79364.herokuapp.com/shipping', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Succesfully Inserted")
@@ -24,7 +24,7 @@ const ServiceDetails = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://immense-dawn-79364.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

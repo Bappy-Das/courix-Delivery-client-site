@@ -23,8 +23,6 @@ const Headers = () => {
                             <Nav.Link as={HashLink} to="/about">About Us</Nav.Link>
                             <Nav.Link as={HashLink} to="/contact">Contact Us</Nav.Link>
 
-                            <Nav.Link as={HashLink} to="/newservice">Add New Service</Nav.Link>
-                            <Nav.Link as={HashLink} to="/manageorder">Manage All Order</Nav.Link>
 
 
                         </Nav>
@@ -33,8 +31,11 @@ const Headers = () => {
                                 <div className="d-flex">
                                     <HashLink to="/myorder"><img className="user-img" src={user?.photoURL} alt="" srcset="" /></HashLink>
                                     <NavDropdown title={user?.displayName} id="collasible-nav-dropdown">
-                                        <NavDropdown.Item as={HashLink} to="/">My Profile</NavDropdown.Item>
+
                                         <NavDropdown.Item as={HashLink} to="/myorder">My Order</NavDropdown.Item>
+                                        <NavDropdown.Item as={HashLink}
+                                            to="/manageorder">Manage All Order</NavDropdown.Item>
+                                        <NavDropdown.Item as={HashLink} to="/newservice">Add New Service</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item onClick={logOut}>Log Out</NavDropdown.Item>
                                     </NavDropdown>
