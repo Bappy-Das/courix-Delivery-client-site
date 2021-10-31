@@ -66,8 +66,8 @@ const ServiceDetails = () => {
                         <input {...register("user_name")} value={user?.displayName} />
                         <span>Email :</span>
                         <input {...register("email")} value={user?.email} />
-                        <span>Product Sent Via :</span>
-                        <input {...register("service_name")} value={service?.name?.toLowerCase()} />
+                        {/* <span>Product Sent Via :</span> */}
+                        {/* <input {...register("service_name")} value={service?.name?.toLowerCase()} /> */}
                         <input
                             {...register("date", { required: true })}
                             placeholder="date"
@@ -76,14 +76,14 @@ const ServiceDetails = () => {
                         />
                         <span>Product Type :</span>
                         <select {...register("product_Type")}>
-                            <option value="female">Documentation</option>
-                            <option value="male">Electronics</option>
-                            <option value="other">Goods</option>
+                            <option value="Documentation">Documentation</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Goods">Goods</option>
                         </select>
                         <span>Shipping Method :</span>
                         <select {...register("payment_option")}>
-                            <option value="female">Cash On Delivery</option>
-                            <option value="male">Pre Peyment</option>
+                            <option value="cash_on_delevery">Cash On Delivery</option>
+                            <option value="cas">Pre Peyment</option>
                         </select>
                         <span>Shipping Address :</span>
                         <input {...register("address", { required: true })} placeholder="Shipping Address" />

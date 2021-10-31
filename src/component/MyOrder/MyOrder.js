@@ -50,19 +50,19 @@ const MyOrder = () => {
             </Row>
             {
                 remainig.map(order => <Row className="m-3 p-4 order-body">
-                    <Col xs={4} md={4}>
-                        <p>Service Name: </p>
-                        <p>Product : {order.service_name} </p>
+                    <Col xs={4} md={3}>
+                        <p>Service Name: {order?.booked_service?.name}</p>
+                        <p>Product Type: {order?.product_Type} </p>
                     </Col>
-                    <Col xs={6} md={6}>
-                        <p>Order By : {order.user_name}</p>
-                        <p>Email : {order.email}</p>
-                        <p>Address : </p>
-                        <p>Delevery Date: </p>
-                        <p>Phone : </p>
+                    <Col xs={6} md={7}>
+                        <p>Order By : {order?.user_name}</p>
+                        <p>Email : {order?.email}</p>
+                        <p>Address : {order?.address}</p>
+                        <p>Order Date: {order?.date}</p>
+                        <p>Phone : {order?.phone}</p>
                     </Col>
                     <Col xs={2} md={2} className="d-flex flex-column justify-content-center align-items-center">
-                        <p>Status : Pending</p>
+                        <p>Status : {order?.status}</p>
                         <Button onClick={() => handleDelete(order._id)} variant="danger">Delete Order</Button>
                     </Col>
                 </Row>)

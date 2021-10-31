@@ -19,10 +19,10 @@ const AddSeervice = () => {
     return (
         <Container className="banner-row add-service">
             <Row>
-                <Col className="d-flex justify-content-center align-items-center">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
                     <h1 className="fw-bold h1-font">Add a New Service</h1>
                 </Col>
-                <Col>
+                <Col xs={12} md={6}>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <span>Service Name : </span>
                         <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
