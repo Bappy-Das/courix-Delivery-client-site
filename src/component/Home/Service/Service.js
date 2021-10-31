@@ -19,11 +19,11 @@ const Service = () => {
     return (
         <Container id="service" className="banner-row">
             <Row xs={1} md={2} className="my-5">
-                <h1><span className="custom-text-color">Services</span> on which we specialize</h1>
+                <h1><span className="custom-text-color">Services</span> on which <br /> we specialize</h1>
                 <p className="p-4">We offer you with a wide range of services, which will make your delivery process easy and quick. All our services are presented here.</p>
             </Row>
 
-            <Row xs={1} md={3} className="g-4">
+            {/* <Row xs={1} md={3} className="g-4">
 
                 {
                     service.map(data => <Col>
@@ -43,7 +43,7 @@ const Service = () => {
                         </Card>
                     </Col>)
                 }
-            </Row>
+            </Row> */}
             <Row>
 
                 <section class="light">
@@ -53,10 +53,10 @@ const Service = () => {
                         {
                             service.map(data => <article class="postcard light blue">
                                 <a class="postcard__img_link" href="#">
-                                    <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+                                    <img class="postcard__img" src={data.img} alt="Image Title" />
                                 </a>
                                 <div class="postcard__text t-dark">
-                                    <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+                                    <h1 class="postcard__title blue"><a href="#">{data.name}</a></h1>
                                     <div class="postcard__subtitle small">
                                         <time datetime="2020-05-25 12:00:00">
                                             <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020

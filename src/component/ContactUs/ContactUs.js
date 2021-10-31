@@ -9,7 +9,7 @@ const ContactUs = () => {
 
                 <Row className="my-5">
                     <div className="col-md-8 p-5">
-                        <h3 className="mb-5 custom-text-color">Leave Us Message</h3>
+                        <h2 className="mb-5 custom-text-color">Leave Us Message</h2>
                         <hr />
                         <Form>
                             <Row className="mb-3">
