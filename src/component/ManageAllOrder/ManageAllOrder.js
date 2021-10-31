@@ -75,10 +75,12 @@ const ManageAllOrder = () => {
 
                         {
                             (order.status === "Approved") ? <Button
+                                className="my-2"
                                 variant="info">
                                 {order?.status}
                             </Button> :
                                 <Button
+                                    className="my-2"
                                     onClick={() => updateStatus(order._id)}
                                     variant="info">
                                     {order?.status}
