@@ -55,7 +55,9 @@ const ManageAllOrder = () => {
                 </Col>
             </Row>
             {
-                orders.map(order => <Row className="m-3 p-4 order-body">
+                orders.map(order => <Row
+                    key={order?._id}
+                    className="m-3 p-4 order-body">
                     <Col xs={4} md={3}>
                         <p>Service Name: {order?.booked_service?.name}</p>
                         <p>Product Type: {order?.product_Type} </p>

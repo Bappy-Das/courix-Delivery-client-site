@@ -23,8 +23,6 @@ const Login = () => {
 
 
 
-
-
     return (
         <div className="p-5 m-5  login-page">
             <Button onClick={handleLogin} className="text-center" variant="warning"><FcGoogle size="40" /> Sign in with Google</Button>

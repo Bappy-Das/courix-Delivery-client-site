@@ -49,7 +49,9 @@ const MyOrder = () => {
                 </Col>
             </Row>
             {
-                remainig.map(order => <Row className="m-3 p-4 order-body">
+                remainig.map(order => <Row
+                    key={order?._id}
+                    className="m-3 p-4 order-body">
                     <Col xs={4} md={3}>
                         <p>Service Name: {order?.booked_service?.name}</p>
                         <p>Product Type: {order?.product_Type} </p>

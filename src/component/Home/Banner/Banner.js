@@ -15,7 +15,7 @@ const Banner = () => {
                     </Col>
                     <Col xs={12} md={6}>
                         <div className="banner-img">
-                            <img className="img-fluid" src={bannerImage} alt="" srcset="" />
+                            <img className="img-fluid" src={bannerImage} alt="" srcSet="" />
                         </div>
                     </Col>
                 </Row>

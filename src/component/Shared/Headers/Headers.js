@@ -14,7 +14,7 @@ const Headers = () => {
         <div className="">
             <Navbar collapseOnSelect expand="lg" fixed="top" className="my-0 py-0 head-bg" variant="dark">
                 <Container>
-                    <Navbar.Brand as={HashLink} to="/" > <img className="img-fluid" src={logo1} alt="Curix" srcset="" /> </Navbar.Brand>
+                    <Navbar.Brand as={HashLink} to="/" > <img className="img-fluid" src={logo1} alt="Curix" srcSet="" /> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
@@ -29,7 +29,7 @@ const Headers = () => {
                         <Nav>
                             {user?.accessToken ?
                                 <div className="d-flex">
-                                    <HashLink to="/myorder"><img className="user-img" src={user?.photoURL} alt="" srcset="" /></HashLink>
+                                    <HashLink to="/myorder"><img className="user-img" src={user?.photoURL} alt="" srcSet="" /></HashLink>
                                     <NavDropdown title={user?.displayName} id="collasible-nav-dropdown">
 
                                         <NavDropdown.Item as={HashLink} to="/myorder">My Order</NavDropdown.Item>

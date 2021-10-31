@@ -9,7 +9,7 @@ const AboutUs = () => {
             <Container className="banner-row">
                 <Row className="about">
                     <Col xs={12} md={6} className="p-4">
-                        <img className="img-fluid" src={aboutImage} alt="" srcset="" />
+                        <img className="img-fluid" src={aboutImage} alt="" srcSet="" />
                     </Col>
                     <Col xs={12} md={6} className="p-4">
                         <h1>We always <span className="custom-text-color">work on</span> the conscience.</h1>

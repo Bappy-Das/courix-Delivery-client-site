@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { FaArrowRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import useAuth from '../../../../hooks/useAuth';
 import { useForm } from 'react-hook-form';

@@ -40,9 +40,6 @@ function App() {
             <PrivateRoute path="/servicedetails/:id">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            {/* <PrivateRoute path="/shipping">
-              <ServiceDetails></ServiceDetails>
-            </PrivateRoute> */}
             <Route path="/login">
               <Login></Login>
             </Route>

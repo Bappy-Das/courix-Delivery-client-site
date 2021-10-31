@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import './Service.css'
@@ -26,16 +26,18 @@ const Service = () => {
 
 
             <Row>
-                <div class="container">
+                <div className="container">
 
-                    <div class="row">
+                    <div className="row">
 
                         {
-                            service.map(data => <div class="col-md-4 col-sm-6 service">
-                                <div class="card card-block p-3 m-3">
+                            service.map(data => <div
+                                key={data?._id}
+                                className="col-md-4 col-sm-6 service">
+                                <div className="card card-block p-3 m-3">
                                     <img src={data.img} alt="card-img" />
-                                    <h5 class="card-title  mt-3 mb-3">{data?.name}</h5>
-                                    <p class="card-text">{data?.description}</p>
+                                    <h5 className="card-title  mt-3 mb-3">{data?.name}</h5>
+                                    <p className="card-text">{data?.description}</p>
                                     <ul>
                                         <li>Big Cartoon Cost : {data?.big_carton} $</li>
                                         <li>Small Cartoon Cost: {data?.small_carton} $</li>
@@ -43,7 +45,7 @@ const Service = () => {
                                     </ul>
                                     <hr />
                                     <Link to={`./servicedetails/${data._id}`}>
-                                        <Button classNameName="fw-bold" variant="warning">Details <FaArrowRight /></Button>
+                                        <Button className="fw-bold" variant="warning">Details <FaArrowRight /></Button>
                                     </Link>
                                 </div>
                             </div>)
@@ -55,24 +57,6 @@ const Service = () => {
                 </div>
 
             </Row>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </Container>

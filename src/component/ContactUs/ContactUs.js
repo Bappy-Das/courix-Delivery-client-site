@@ -6,7 +6,8 @@ const ContactUs = () => {
     return (
         <>
             <Container className="banner-row">
-
+                <h1 className="fw-bold text-center">Contact Us</h1>
+                <hr className="w-50 mx-auto" />
                 <Row className="my-5">
                     <div className="col-md-8 p-5">
                         <h2 className="mb-5 custom-text-color">Leave Us Message</h2>
