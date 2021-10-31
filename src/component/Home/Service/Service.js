@@ -5,6 +5,7 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import './Service.css'
+// import './box.css'
 
 
 
@@ -23,58 +24,52 @@ const Service = () => {
                 <p className="p-4">We offer you with a wide range of services, which will make your delivery process easy and quick. All our services are presented here.</p>
             </Row>
 
-            {/* <Row xs={1} md={3} className="g-4">
 
-                {
-                    service.map(data => <Col>
-                        <Card>
-                            <Card.Img variant="top" src={data.img} />
-                            <Card.Body>
-                                <Card.Title>{data.name}</Card.Title>
-                                <Card.Text>
-                                    {data.description}
-                                </Card.Text>
-                            </Card.Body>
-                            <Card.Footer>
-                                <Link to={`./servicedetails/${data._id}`}>
-                                    <Button className="fw-bold" variant="warning">Details <FaArrowRight /></Button>
-                                </Link>
-                            </Card.Footer>
-                        </Card>
-                    </Col>)
-                }
-            </Row> */}
             <Row>
+                <div class="container">
 
-                <section class="light">
-                    <div class="container py-2">
-                        <div class="h1 text-center text-dark" id="pageHeaderTitle">My Cards Light</div>
+                    <div class="row">
 
                         {
-                            service.map(data => <article class="postcard light blue">
-                                <a class="postcard__img_link" href="#">
-                                    <img class="postcard__img" src={data.img} alt="Image Title" />
-                                </a>
-                                <div class="postcard__text t-dark">
-                                    <h1 class="postcard__title blue"><a href="#">{data.name}</a></h1>
-                                    <div class="postcard__subtitle small">
-                                        <time datetime="2020-05-25 12:00:00">
-                                            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                                        </time>
-                                    </div>
-                                    <div class="postcard__bar"></div>
-                                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
-
+                            service.map(data => <div class="col-md-4 col-sm-6">
+                                <div class="card card-block p-3 m-3">
+                                    <img src={data.img} alt="card-img" />
+                                    <h5 class="card-title  mt-3 mb-3">{data.name}</h5>
+                                    <p class="card-text">This is a company that builds websites, web.</p>
+                                    <hr />
                                     <Link to={`./servicedetails/${data._id}`}>
-                                        <Button className="fw-bold" variant="warning">Details <FaArrowRight /></Button>
+                                        <Button classNameName="fw-bold" variant="warning">Details <FaArrowRight /></Button>
                                     </Link>
                                 </div>
-                            </article>)
+                            </div>)
                         }
 
+
                     </div>
-                </section>
+
+                </div>
+
             </Row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </Container>
     );
 };
