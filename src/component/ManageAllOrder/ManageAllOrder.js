@@ -28,7 +28,7 @@ const ManageAllOrder = () => {
     }
     const updateStatus = (id) => {
 
-        axios.put(`http://localhost:5000/updateOrder`, { id })
+        axios.put(`https://immense-dawn-79364.herokuapp.com/updateOrder`, { id })
             .then(res => console.log("Order Approved"))
             .then((data) => setStatus(true))
 
