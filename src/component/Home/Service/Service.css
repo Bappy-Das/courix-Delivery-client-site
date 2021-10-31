@@ -17,33 +17,33 @@ img{
     padding-left:5px;
     padding-right:5px;
   }
-  .card{
+  .service .card{
     transition:0.5s;
     border-radius: 10px;
     cursor:pointer;
   }
-  .card-title{  
+  .service .card-title{  
     font-size:15px;
     transition:1s;
    
   }
-  .card-title i{  
+  .service .card-title i{  
     font-size:15px;
     transition:1s;
    
     color:#ffa710
   }
 
-  .card:hover{
+  .service .card:hover{
 	background-color: rgb(235, 253, 218);
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
   }
-  .card-text{
+  .service .card-text{
     height:80px;  
   }
   
-  .card::before, .card::after {
+  .service .card::before, .card::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -55,12 +55,12 @@ img{
     content: '';
     pointer-events: none;
   }
-  .card::before {
+  .service .card::before {
     transform-origin: left top;
   }
-  .card::after {
+  .service .card::after {
     transform-origin: right bottom;
   }
-  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  .service .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
     transform: scale3d(1, 1, 1);
   }

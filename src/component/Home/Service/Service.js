@@ -31,11 +31,16 @@ const Service = () => {
                     <div class="row">
 
                         {
-                            service.map(data => <div class="col-md-4 col-sm-6">
+                            service.map(data => <div class="col-md-4 col-sm-6 service">
                                 <div class="card card-block p-3 m-3">
                                     <img src={data.img} alt="card-img" />
-                                    <h5 class="card-title  mt-3 mb-3">{data.name}</h5>
-                                    <p class="card-text">This is a company that builds websites, web.</p>
+                                    <h5 class="card-title  mt-3 mb-3">{data?.name}</h5>
+                                    <p class="card-text">{data?.description}</p>
+                                    <ul>
+                                        <li>Big Cartoon Cost : {data?.big_carton}</li>
+                                        <li>Small Cartoon Cost: {data?.small_carton}</li>
+                                        <li>Over 20 Kg : {data?.avoveKg}</li>
+                                    </ul>
                                     <hr />
                                     <Link to={`./servicedetails/${data._id}`}>
                                         <Button classNameName="fw-bold" variant="warning">Details <FaArrowRight /></Button>

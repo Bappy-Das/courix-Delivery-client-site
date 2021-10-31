@@ -1,0 +1,11 @@
+.ship-service{
+    margin-top: 150px;
+    overflow-x: hidden;
+}
+.btn-cls{
+    background-color: #FF922D;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+    height: 50px;
+}
